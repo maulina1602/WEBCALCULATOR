@@ -54,8 +54,12 @@ const calculator = {
     let result = 0;
     if (calculator.operator === "+") {
         result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
-    } else {
+    } else if (calculator.operator === "-") {
         result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)
+    } else if (calculator.operator === "*"){
+        result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber)
+    } else{
+        result = parseInt(calculator.firstNumber) / parseInt(calculator.displayNumber)
     }
   
     // objek yang akan dikirimkan sebagai argumen fungsi putHistory()
